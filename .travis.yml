@@ -8,3 +8,7 @@ deploy:
   app: diabetes-dashboard
   on:
     repo: pikesley/diabetes-dashboard
+env:
+  global:
+  - secure: Ep7GSikZkw7pFXdGIAhSlyyzQpxvEuswyEtFX5FdhaLkcC3jx45h+irbHhFLsigGeVZrshgApqece/oa+/mTqHNfNnrMeHz+tb4TFjUxIr2Ed8FbP3P+pPQbgBV7HP/F+A+AK3mDnJNXRpV30nA0W2B3c6hLz/qJWEqtARUpAq8=
+  - secure: DJ6xEu1W4ju4+FAvCRKxZ9fJjBqqeh290W/IrktqaWDGROGVQ8bJGJvPKAmx/DCA7Hbp0End1BGAc0vboA+YkV2A/YSBpTinhWAmV+LtxAMrHWxs8qmUKKFza4ED8kRdjuymS2cGzG277oIZp2IPOdHwRDsThY3bjMgjZicd/as=
