@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://hba<SHLVL>c:<METRICS_API_PASSWORD>@pancreas-api.herokuapp.com/metrics/glucose/PT24H/20<SHLVL>4-0<SHLVL>-<SHLVL>3T08:00:00+00:00
+    uri: https://<METRICS_API_USERNAME>:<METRICS_API_PASSWORD>@pancreas-api.herokuapp.com/metrics/glucose/PT24H/2014-01-13T08:00:00+00:00
     body:
       encoding: US-ASCII
       string: ''
@@ -17,17 +17,17 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Server:
-      - thin <SHLVL>.6.<SHLVL> codename Death Proof
+      - thin 1.6.1 codename Death Proof
       X-Content-Type-Options:
       - nosniff
       Content-Length:
-      - 47<SHLVL>
+      - '471'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "{\"count\":6,\"values\":[{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>2T<SHLVL>0:22:00+00:00\",\"value\":7.9,\"category\":\"Breakfast\"},{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>2T<SHLVL>3:49:00+00:00\",\"value\":6.2,\"category\":\"Lunch\"},{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>2T<SHLVL>7:2<SHLVL>:00+00:00\",\"value\":3.7,\"category\":\"After
-        Lunch\"},{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>2T20:<SHLVL>8:00+00:00\",\"value\":7.5,\"category\":\"Dinner\"},{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>2T23:57:00+00:00\",\"value\":7.5,\"category\":\"Bedtime\"},{\"datetime\":\"20<SHLVL>4-0<SHLVL>-<SHLVL>3T07:3<SHLVL>:00+00:00\",\"value\":6.5,\"category\":\"Breakfast\"}]}"
+      string: "{\"count\":6,\"values\":[{\"datetime\":\"2014-01-12T10:22:00+00:00\",\"value\":7.9,\"category\":\"Breakfast\"},{\"datetime\":\"2014-01-12T13:49:00+00:00\",\"value\":6.2,\"category\":\"Lunch\"},{\"datetime\":\"2014-01-12T17:21:00+00:00\",\"value\":3.7,\"category\":\"After
+        Lunch\"},{\"datetime\":\"2014-01-12T20:18:00+00:00\",\"value\":7.5,\"category\":\"Dinner\"},{\"datetime\":\"2014-01-12T23:57:00+00:00\",\"value\":7.5,\"category\":\"Bedtime\"},{\"datetime\":\"2014-01-13T07:31:00+00:00\",\"value\":6.5,\"category\":\"Breakfast\"}]}"
     http_version: 
   recorded_at: Mon, 13 Jan 2014 08:00:00 GMT
 recorded_with: VCR 2.8.0

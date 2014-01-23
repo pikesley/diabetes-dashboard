@@ -11,11 +11,15 @@ $:.unshift File.dirname(__FILE__)+'../lib'
 
 VCR.configure do |c|
   # Automatically filter all secure details that are stored in the environment
-  ignore_env = %w{METRICS_API}
-  (ENV.keys-ignore_env).select{|x| x =~ /\A[A-Z_]*\Z/}.each do |key|
-    c.filter_sensitive_data("<#{key}>") { ENV[key] }
+  [
+      'METRICS_API_USERNAME',
+      'METRICS_API_PASSWORD'
+  ].each do |env_var|
+    c.filter_sensitive_data("<#{env_var}>") { ENV[env_var] }
   end
-  c.cassette_library_dir = 'spec/cassettes'
+
+
+  c.cassette_library_dir     = 'spec/cassettes'
   c.default_cassette_options = { :record => :once }
   c.hook_into :webmock
   c.configure_rspec_metadata!
@@ -24,7 +28,7 @@ end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
-  config.run_all_when_everything_filtered = true
+  config.run_all_when_everything_filtered                = true
   config.filter_run :focus
 
   # Run specs in random order to surface order dependencies. If you find an
