@@ -9,7 +9,6 @@ gem 'dotenv'
 gem 'json'
 gem 'httparty'
 gem 'curb'
-gem 'twitter'
 
 group :development, :test do
   gem 'vcr'
