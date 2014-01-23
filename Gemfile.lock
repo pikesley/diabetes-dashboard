@@ -91,6 +91,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.1.1)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -177,6 +178,7 @@ DEPENDENCIES
   guard-rspec
   httparty
   json
+  rake
   rspec
   rspec-pride
   terminal-notifier-guard
