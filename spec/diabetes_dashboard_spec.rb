@@ -26,5 +26,9 @@ describe DiabetesDashboard do
     it 'should return an average for the last 24 hours', :vcr do
       DiabetesDashboard.glucose_average(1).should == 6.6
     end
+
+    it 'should return an average for the last week', :vcr do
+      DiabetesDashboard.glucose_average(7).should == 10.2
+    end
   end
 end

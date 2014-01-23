@@ -3,3 +3,4 @@ history.yml
 .idea
 .env
 .bundle
+coverage

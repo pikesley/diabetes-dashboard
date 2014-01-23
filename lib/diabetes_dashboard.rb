@@ -24,7 +24,7 @@ class DiabetesDashboard
 
   def self.glucose_average days = 7
     points = data(days)
-    ((points.inject(0) { |sum, i| sum += i['value']}) / points.length).round(1)
+    ((points.inject(0) { |sum, i| sum += i['value'] }) / points.length).round(1)
   end
 
   def self.url metric, days
