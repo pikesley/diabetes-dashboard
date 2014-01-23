@@ -4,6 +4,7 @@ ruby '2.1.0'
 #ruby-gemset=diabetes-dashboard
 
 gem 'dashing'
+gem 'rake'
 gem 'dotenv'
 gem 'json'
 gem 'httparty'
