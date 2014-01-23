@@ -1,4 +1,10 @@
 language: ruby
 rvm:
 - 2.1.0
-
+deploy:
+  provider: heroku
+  api_key:
+    secure: Ua+e6rnRl+W2fRvIt4IDkvaG0RbACyRGNONrOlKUR9nhsQo2Rqi0tEOeyRChzmmYufmKR2KKOmU4tVXZD1U2D66NNnJ5FvBZ/O0nHOMoD6Lnr1AjrC5/I358MJ+t/5K1SZV7ixo0N3sKR5xdkwWJw+Ja6SORv13u0YU+ox7YLLI=
+  app: diabetes-dashboard
+  on:
+    repo: pikesley/diabetes-dashboard
