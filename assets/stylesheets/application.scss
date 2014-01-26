@@ -16,6 +16,30 @@ $background-danger-color-1: #eeae32;
 $background-danger-color-2: #ff9618;
 $text-danger-color: #fff;
 
+$odiBlue: #00b7ff;
+$odiBlueDark: #2254f4;
+$odiBlueLight: #08def9;
+$odiOrange: #ff6700;
+$odiYellow: #F9BC26;
+$odiRed: #d60303;
+$odiGrey: #888888;
+$odiGreyDark: #333333;
+$odiGreyLight: #BBBBBB;
+
+// Colour variables, primarily for home modules
+$odiColour1: #D60303; // red
+$odiColour2: $odiOrange; // orange
+$odiColour3: $odiYellow; // yellow
+$odiColour4: #67EF67; //light green
+$odiColour5: #0DBC37; // med green
+$odiColour6: #1dd3a7; // turquoise
+$odiColour7: $odiBlueDark; // dark blue
+$odiColour8: $odiBlue;
+$odiColour9: $odiBlueLight; // light blue
+$odiColour10: #ef3aab; // pink
+$odiColour11: #e6007c; // magenta
+$odiColour12: #b13198; // purple
+
 @-webkit-keyframes status-warning-background {
   0%   { background-color: $background-warning-color-1; }
   50%  { background-color: $background-warning-color-2; }
@@ -35,22 +59,22 @@ $text-danger-color: #fff;
 // ----------------------------------------------------------------------------
 // Base styles
 // ----------------------------------------------------------------------------
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+html { 
+  font-size: 100%; 
+  -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%; 
 }
 
-body {
-  margin: 0;
+body { 
+  margin: 0; 
   background-color: $background-color;
   font-size: 20px;
   color: $text-color;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, 'Open Sans', Arial, sans-serif;
 }
 
-b, strong {
-  font-weight: bold;
+b, strong { 
+  font-weight: bold; 
 }
 
 a {
@@ -58,18 +82,18 @@ a {
   color: inherit;
 }
 
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  vertical-align: middle;
+img { 
+  border: 0; 
+  -ms-interpolation-mode: bicubic; 
+  vertical-align: middle; 
 }
 
-img, object {
-  max-width: 100%;
+img, object { 
+  max-width: 100%; 
 }
 
-iframe {
-  max-width: 100%;
+iframe { 
+  max-width: 100%; 
 }
 
 table {
@@ -82,16 +106,16 @@ td {
   vertical-align: middle;
 }
 
-ul, ol {
-  padding: 0;
-  margin: 0;
+ul, ol { 
+  padding: 0; 
+  margin: 0; 
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p { 
   padding: 0;
-  margin: 0;
+  margin: 0; 
 }
-h1 {
+h1 { 
   margin-bottom: 12px;
   text-align: center;
   font-size: 30px;
@@ -124,8 +148,6 @@ h3 {
   top: 0;
   opacity: 0.1;
   font-size: 275px;
-  text-align: center;
-  margin-top: 82px;
 }
 
 .list-nostyle {
@@ -154,7 +176,7 @@ h3 {
   background-color: $background-warning-color-1;
   @include animation(status-warning-background, 2s, ease, infinite);
 
-  .icon-warning-sign {
+  .icon-warning-sign { 
     display: inline-block;
   }
 
@@ -168,7 +190,7 @@ h3 {
   background-color: $background-danger-color-1;
   @include animation(status-danger-background, 2s, ease, infinite);
 
-  .icon-warning-sign {
+  .icon-warning-sign { 
     display: inline-block;
   }
 
@@ -247,6 +269,50 @@ h3 {
   padding-top: 5px;
 }
 
+// Changes to widgets
+
+.widget-number.scribd-views {
+  background: #154d63 url(scribd.png) center no-repeat;
+}
+
+.widget-number.soundcloud-listens {
+  background: #ff6000 url(soundcloud.png) center no-repeat;
+}
+
+.previous-lectures {
+  background-color: #fb9619;
+}
+
+.upcoming-lectures, .previous-lectures {
+  vertical-align: top !important;
+  
+  .progress {
+    position: absolute;
+    font-size: 8px;
+    left: 0;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+    
+    span {
+      margin: 0 2px;
+      opacity: 0.5;
+    }
+    
+    span.active {
+      opacity: 1;
+    }
+  }
+}
+
+.data {
+  font-size: 15px;
+  position: absolute;
+  right: 15px;
+  bottom: 12px;
+  opacity: 0.3;
+  color: #000;
+}
 
 // ----------------------------------------------------------------------------
 // Clearfix
@@ -255,3 +321,225 @@ h3 {
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+// Custom
+
+#tech-header {
+  padding: 10px 18px;
+  background-color: #dc5945;
+  
+  img {
+    margin: 10px 55px;
+  }
+  
+  h1 {
+    margin-bottom: 0;
+    font-size: 28px;  
+  }
+}
+
+#company, #membership, #commercial {
+
+  #company-header {
+    position: relative;
+  
+    img {
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 195px;
+    }
+  
+    h1.title {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      font-size: 55px;
+      font-weight: bold; 
+      padding: 0;
+      margin: 0; 
+      color: #666;
+    }
+  }
+  
+}
+
+#company {
+
+  #q4-progress {
+    background-color: $odiColour7;
+  }
+
+  #q3-progress {
+    background-color: $odiColour6;
+  }
+
+  #q2-progress {
+    background-color: $odiColour9;
+  }
+
+  #q1-progress {
+    background-color: $odiColour8;
+  }
+
+  #reach {
+    background-color: $odiColour3;
+  }
+
+  #bookings {
+    background-color: $odiColour2;
+  }
+
+  #kpis {
+    background-color: $odiColour1;
+  }
+
+  #value {
+    background-color: $odiColour10;
+  }
+
+  #odcs {
+    background-color: $odiColour11;
+  }
+
+  #members {
+    background-color: $odiColour12;
+  }
+
+  .title-wrapper {
+    height: 72px;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+    width: 300px;
+    padding-bottom: 10px;
+  
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#membership {
+  
+  #total-members {
+    background-color: $odiColour7;
+  }
+  
+  #member-members {
+    background-color: $odiColour3;
+  }
+  
+  #partner-members {
+    background-color: $odiColour2;
+  }
+  
+  #sponsor-members {
+    background-color: $odiColour1;
+  }
+  
+  #renewals {
+    background-color: $odiColour5;
+    
+    h2 {
+      font-size: 25px;
+      text-transform: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+    
+    .list {
+      width: 32%;
+      float: left;
+      margin-right: 1%;
+      
+      li {
+        width: 76%;
+        margin-left: 13%;
+        text-align: left;
+        position: relative;
+        
+        .value {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+  
+  #income {
+    background-color: $odiColour6;
+  }
+
+  #ranking {
+    background-color: $odiColour8;
+  }
+  
+  .widget-number {
+    .title {
+      font-size: 30px;
+    }
+    h2.value {
+      font-size: 76px;
+      line-height: 1em;
+    }
+  }
+  
+  .by-level {
+    .title {
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+    h2.value {
+      font-size: 50px;
+    }
+  }
+
+}
+
+#commercial {
+  
+  #members {
+    background-color: $odiColour10;
+  }
+
+  #weighted-pipeline {
+    background-color: $odiColour2;
+  }
+
+  #old-opportunities {
+    background-color: $odiColour1;
+  }
+
+  #bookings {
+    background-color: $odiColour3;
+  }
+
+  #revenue {
+    background-color: $odiColour11;
+  }
+
+  #backlog {
+    background-color: $odiColour12;
+  }
+  
+  #pipeline {
+    background-color: $odiColour9;
+  }
+
+  #weighted-pipeline {
+    background-color: $odiColour8;
+  }
+
+  .widget-number {
+    .title {
+      font-size: 22px;
+    }
+    h2.value {
+      font-size: 60px;
+      line-height: 1em;
+      text-transform: none;
+    }
+  }
+
+}

@@ -7,13 +7,23 @@ class Dashing.Number extends Dashing.Widget
       current = parseInt(@get('current'))
       if last != 0
         diff = Math.abs(Math.round((current - last) / last * 100))
-        "#{diff}%"
+        if diff > 0
+          "#{diff}%"
+        else
+          ""
     else
       ""
 
   @accessor 'arrow', ->
     if @get('last')
-      if parseInt(@get('current')) > parseInt(@get('last')) then 'icon-arrow-up' else 'icon-arrow-down'
+      if parseInt(@get('current')) == parseInt(@get('last')) 
+        ''
+      else if parseInt(@get('current')) > parseInt(@get('last')) 
+        'icon-arrow-up'
+      else
+        'icon-arrow-down'
+    else
+      $(@node).find(".change-rate").addClass('hidden')
 
   onData: (data) ->
     if data.status
