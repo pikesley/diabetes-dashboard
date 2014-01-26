@@ -19,7 +19,31 @@ class DiabetesDashboard
   end
 
   def self.average metric, days = 7
+    filter   = false
+    category = nil
+    if [
+        'Breakfast',
+        'Lunch',
+        'Dinner'
+    ].include? metric
+      category = metric
+      metric   = 'humalog'
+      filter   = true
+    end
+    if [
+        'Bedtime'
+    ].include? metric
+      category = metric
+      metric   = 'lantus'
+      filter   = true
+    end
+
     points = data(metric, days)
+
+    if filter
+      points.select! { |i| i['category'] == category }
+    end
+
     ((points.inject(0) { |sum, i| sum += i['value'] }) / points.length).round(1)
   end
 
