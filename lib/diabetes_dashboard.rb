@@ -18,14 +18,6 @@ class DiabetesDashboard
     j['values']
   end
 
-#  def self.humalog days
-#    points 'humalog', days
-#  end
-
-#  def self.glucose days
-#    points 'glucose', days
-#  end
-
   def self.average metric, days = 7
     points = data(metric, days)
     ((points.inject(0) { |sum, i| sum += i['value'] }) / points.length).round(1)
@@ -33,6 +25,17 @@ class DiabetesDashboard
 
   def self.points metric, days
     data(metric, days).map { |i| { x: datestamp(i['datetime']), y: i['value'] } }
+  end
+
+  def self.doses category, days = 7
+    metric = 'humalog'
+    if category == 'Bedtime'
+      metric = 'lantus'
+    end
+
+    d = data(metric, days)
+    d.select! { |i| i['category'] == category }
+    d.map { |i| { x: datestamp(i['datetime']), y: i['value'] } }
   end
 
   def self.datestamp datetime

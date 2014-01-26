@@ -2,7 +2,7 @@
     $(function () {
         // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
         Dashing.widget_base_dimensions = [150, 120]
-        Dashing.numColumns = 8
+//        Dashing.numColumns = 8
         Dashing.numColumns = 8
         // Disable the layout drag
     });
@@ -13,19 +13,17 @@
 <div class="gridster">
   <ul>
 
-    <li data-row="1" data-col="0" data-sizex="3" data-sizey="2">
+    <li data-row="1" data-col="0" data-sizex="4" data-sizey="2">
       <div data-id="daily-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 24 hours" style="background-color:#ff9618"></div>
     </li>
 
-    <li data-row="3" data-col="0" data-sizex="3" data-sizey="2">
+    <li data-row="3" data-col="0" data-sizex="4" data-sizey="2">
       <div data-id="weekly-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 7 days" style="background-color:#ff9618"></div>
     </li>
 
-    <li data-row="5" data-col="0" data-sizex="3" data-sizey="2">
+    <li data-row="5" data-col="0" data-sizex="4" data-sizey="2">
       <div data-id="monthly-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 30 days" style="background-color:#ff9618"></div>
     </li>
-
-
 
   </ul>
 

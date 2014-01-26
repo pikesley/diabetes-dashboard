@@ -67,5 +67,30 @@ describe DiabetesDashboard do
         ]
       end
     end
+
+    context 'categories' do
+      it 'should return a list of Breakfast doses', :vcr do
+        DiabetesDashboard.doses('Breakfast', 7).should == [
+            { :x => 1389079680, :y => 4.0 },
+            { :x => 1389166860, :y => 4.0 },
+            { :x => 1389252840, :y => 4.5 },
+            { :x => 1389339600, :y => 5.0 },
+            { :x => 1389522240, :y => 4.5 },
+            { :x => 1389598740, :y => 5.0 }
+        ]
+      end
+
+      it 'should return a list of Bedtime doses', :vcr do
+        DiabetesDashboard.doses('Bedtime', 7).should == [
+            { :x => 1389051300, :y => 15.0 },
+            { :x => 1389138060, :y => 14.0 },
+            { :x => 1389223080, :y => 14.0 },
+            { :x => 1389309840, :y => 16.0 },
+            { :x => 1389398280, :y => 12.0 },
+            { :x => 1389486960, :y => 15.0 },
+            { :x => 1389571140, :y => 12.0 }
+        ]
+      end
+    end
   end
 end
