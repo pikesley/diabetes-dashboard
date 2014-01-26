@@ -91,6 +91,10 @@ describe DiabetesDashboard do
             { :x => 1389571140, :y => 12.0 }
         ]
       end
+
+      it 'should return an average Breakfast dose', :vcr do
+        DiabetesDashboard.average('Breakfast', 7).should == 4.5
+      end
     end
   end
 end
