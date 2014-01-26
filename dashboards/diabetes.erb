@@ -1,7 +1,8 @@
 <script type='text/javascript'>
     $(function () {
         // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-        Dashing.widget_base_dimensions = [150, 140]
+        Dashing.widget_base_dimensions = [150, 120]
+        Dashing.numColumns = 8
         Dashing.numColumns = 8
         // Disable the layout drag
     });
@@ -12,29 +13,18 @@
 <div class="gridster">
   <ul>
 
-    <li data-row="1" data-col="0" data-sizex="3" data-sizey="1">
-      <div data-id="label" data-view="Text" data-title="Blood glucose"></div>
+    <li data-row="1" data-col="0" data-sizex="3" data-sizey="2">
+      <div data-id="daily-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 24 hours" style="background-color:#ff9618"></div>
     </li>
 
-    <li data-row="2" data-col="0" data-sizex="3" data-sizey="2">
-      <div data-id="blood-glucose" data-view="Graph" data-title="Last 7 days" style="background-color:#ff9618"></div>
+    <li data-row="3" data-col="0" data-sizex="3" data-sizey="2">
+      <div data-id="weekly-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 7 days" style="background-color:#ff9618"></div>
     </li>
 
-    <li data-row="4" data-col="0" data-sizex="1" data-sizey="1">
-      <div data-id="glucose-daily-average" data-view="Number" data-title="24 hours"></div>
+    <li data-row="5" data-col="0" data-sizex="3" data-sizey="2">
+      <div data-id="monthly-blood-glucose" data-view="Graph" data-title="Blood-glucose, last 30 days" style="background-color:#ff9618"></div>
     </li>
 
-    <li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
-      <div data-id="glucose-weekly-average" data-view="Number" data-title="7 days"></div>
-    </li>
-
-    <li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
-      <div data-id="glucose-monthly-average" data-view="Number" data-title="30 days"></div>
-    </li>
-
-    <li data-row="0" data-col="4" data-sizex="3" data-sizey="2">
-      <div data-id="humalog" data-view="Graph" data-title="Humalog, last 7 days" style="background-color:#ff9618"></div>
-    </li>
 
 
   </ul>
