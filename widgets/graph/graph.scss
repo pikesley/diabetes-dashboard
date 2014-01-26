@@ -28,11 +28,15 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   .title, .value {
     position: relative;
     z-index: 99;
-    font-size: 0.7em;
   }
 
   .title {
+    font-size: 0.7em;
     color: $title-color;
+  }
+
+  .value {
+    font-size: 2em;
   }
 
   .more-info {
