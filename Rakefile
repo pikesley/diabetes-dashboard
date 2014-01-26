@@ -1,9 +1,11 @@
-require 'rspec/core/rake_task'
-require 'cucumber/rake/task'
-require 'coveralls/rake/task'
+unless ENV['RACK_ENV'] == 'production'
+  require 'rspec/core/rake_task'
+  require 'cucumber/rake/task'
+  require 'coveralls/rake/task'
 
-Coveralls::RakeTask.new
-RSpec::Core::RakeTask.new
-Cucumber::Rake::Task.new
+  Coveralls::RakeTask.new
+  RSpec::Core::RakeTask.new
+  Cucumber::Rake::Task.new
 
-task :default => [:spec, :cucumber, 'coveralls:push']
+  task :default => [:spec, :cucumber, 'coveralls:push']
+end
