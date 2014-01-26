@@ -13,6 +13,18 @@ There'll be a lot more sophisticated stuff here once I've worked out Coffeescrip
 
 # Deployment
 
-This is a straight-up Rack app, it should deploy right onto Heroku. The Heroku environment will need to know about `METRICS_API_USERNAME` and `METRICS_API_PASSWORD` which you'll have set [here](http://pancreas-api.herokuapp.com/#dropbox-integration)
+This is a straight-up Rack app, it should deploy right onto Heroku. The Heroku environment will need to know about 
 
-Check out [http://shopify.github.com/dashing](http://shopify.github.com/dashing) for more on Dashing
+* `METRICS_API_USERNAME` and 
+* `METRICS_API_PASSWORD` 
+
+to access the Pancreas API (you'll have set these [here](http://pancreas-api.herokuapp.com/#dropbox-integration)), and 
+
+* `DASHBOARD_USERNAME` and
+* `DASHBOARD_PASSWORD`
+
+which will allow you into the dashboard
+
+# Dashing is awesome
+
+See [http://shopify.github.com/dashing](http://shopify.github.com/dashing) for more on Dashing
