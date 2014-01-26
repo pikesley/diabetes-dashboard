@@ -9,8 +9,8 @@ class Dashing.Graph extends Dashing.Widget
 
   ready: ->
     color = '#138052'
-    if @get('current') > 8
-      color = '#f00'
+#    if @get('current') > 8
+#      color = '#f00'
     container = $(@node).parent()
     # Gross hacks. Let's fix this.
     width = (Dashing.widget_base_dimensions[0] * container.data("sizex")) + Dashing.widget_margins[0] * 2 * (container.data("sizex") - 1)
