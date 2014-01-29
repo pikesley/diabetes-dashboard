@@ -29,7 +29,7 @@ describe DiabetesDashboard do
       end
 
       it 'should return an average for the last week', :vcr do
-        DiabetesDashboard.average('glucose', 7).should == 10.2
+        DiabetesDashboard.average('glucose', 7).should == 10.3
       end
     end
 
