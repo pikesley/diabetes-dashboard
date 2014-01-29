@@ -8,7 +8,6 @@ gem 'rake'
 gem 'dotenv'
 gem 'json'
 gem 'httparty'
-gem 'badgerbadgerbadger', github: 'pikesley/badger'
 
 group :development, :test do
   gem 'vcr'
