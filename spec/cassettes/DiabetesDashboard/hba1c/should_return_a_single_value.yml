@@ -1,0 +1,32 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<METRICS_API_USERNAME>:<METRICS_API_PASSWORD>@pancreas-api.herokuapp.com/metrics/<METRICS_API_USERNAME>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Server:
+      - thin 1.6.1 codename Death Proof
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '119'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "{\"_id\":\"52e7be6812c670c1200000bb\",\"category\":\"Lunch\",\"datetime\":\"2014-01-28T13:09:44+00:00\",\"name\":\"<METRICS_API_USERNAME>\",\"value\":7.1}"
+    http_version: 
+  recorded_at: Mon, 13 Jan 2014 08:00:00 GMT
+recorded_with: VCR 2.8.0
