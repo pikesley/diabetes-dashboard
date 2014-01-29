@@ -1,8 +1,8 @@
-[![Build Status](http://b.adge.me/travis/pikesley/diabetes-dashboard.svg)](https://travis-ci.org/pikesley/diabetes-dashboard)
-[![Coverage Status](http://b.adge.me/coveralls/pikesley/diabetes-dashboard.svg)](https://coveralls.io/r/pikesley/diabetes-dashboard)
-[![Dependency Status](http://b.adge.me/gemnasium/pikesley/diabetes-dashboard.svg)](https://gemnasium.com/pikesley/diabetes-dashboard)
-[![Code Climate](http://b.adge.me/codeclimate/github/pikesley/diabetes-dashboard.svg)](https://codeclimate.com/github/pikesley/diabetes-dashboard)
-[![License](http://b.adge.me/:license-mit-blue.svg)](http://pikesley.mit-license.org/)
+[![Build Status](http://img.shields.io/travis/pikesley/diabetes-dashboard.svg)](https://travis-ci.org/pikesley/diabetes-dashboard)
+[![Coverage Status](http://img.shields.io/coveralls/pikesley/diabetes-dashboard.svg)](https://coveralls.io/r/pikesley/diabetes-dashboard)
+[![Dependency Status](http://img.shields.io/gemnasium/pikesley/diabetes-dashboard.svg)](https://gemnasium.com/pikesley/diabetes-dashboard)
+[![Code Climate](http://img.shields.io/codeclimate/github/pikesley/diabetes-dashboard.svg)](https://codeclimate.com/github/pikesley/diabetes-dashboard)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://pikesley.mit-license.org)
 
 A Dashing dashboard, driven by my [Pancreas API](http://pancreas-api.herokuapp.com/). Right now it shows:
 
