@@ -7,7 +7,7 @@ Dotenv.load
 class DiabetesDashboard
   @@pancreas_api = 'https://pancreas-api.herokuapp.com/metrics'
 
-  def self.data metric, days = 7
+  def self.data metric, days = nil
     h = HTTParty.get(
         url(metric, days),
         headers:    { 'Accept' => 'application/json' },
@@ -15,10 +15,13 @@ class DiabetesDashboard
     ).body
 
     j = JSON.parse h
+    if days.nil?
+      return j
+    end
     j['values']
   end
 
-  def self.average metric, days = 7
+  def self.average metric, days = nil
     filter   = false
     category = nil
     if [
@@ -51,7 +54,7 @@ class DiabetesDashboard
     data(metric, days).map { |i| { x: datestamp(i['datetime']), y: i['value'] } }
   end
 
-  def self.doses category, days = 7
+  def self.doses category, days = nil
     metric = 'humalog'
     if category == 'Bedtime'
       metric = 'lantus'
@@ -62,17 +65,30 @@ class DiabetesDashboard
     d.map { |i| { x: datestamp(i['datetime']), y: i['value'] } }
   end
 
+  def self.value metric
+    d = data(metric.downcase)
+    d['value']
+  end
+
   def self.datestamp datetime
     DateTime.parse(datetime).strftime("%s").to_i
   end
 
-  def self.url metric, days
-    "%s/%s/%s/%s" % [
+  def self.url metric, days = nil
+    url = "%s/%s" % [
         @@pancreas_api,
-        metric,
-        interval(days),
-        now
+        metric
     ]
+
+    if days
+      url = "%s/%s/%s" % [
+          url,
+          interval(days),
+          now
+      ]
+    end
+
+    url
   end
 
   def self.interval days
