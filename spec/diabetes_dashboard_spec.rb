@@ -96,5 +96,13 @@ describe DiabetesDashboard do
         DiabetesDashboard.average('Breakfast', 7).should == 4.5
       end
     end
+
+    context 'hba1c' do
+      it 'should return a single value', :vcr do
+        Timecop.freeze DateTime.parse '2014-01-29T16:00:00+00:00'
+        DiabetesDashboard.value('HbA1c').should == 7.1
+        Timecop.return
+      end
+    end
   end
 end
