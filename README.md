@@ -8,6 +8,7 @@ A Dashing dashboard, driven by my [Pancreas API](http://pancreas-api.herokuapp.c
 
 * Daily, weekly and 30-day blood-glucose graphs and averages
 * Weekly breakfast, lunch, dinner and bedtime medication graphs and averages
+* Latest HbA1c
 
 There'll be a lot more sophisticated stuff here once I've worked out Coffeescript and [Rickshaw](http://code.shutterstock.com/rickshaw/)
 
