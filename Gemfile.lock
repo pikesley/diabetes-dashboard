@@ -4,7 +4,7 @@ GEM
     addressable (2.3.5)
     atomic (1.1.14)
     backports (3.4.1)
-    badgerbadgerbadger (0.7.2)
+    badgerbadgerbadger (0.7.4)
       git (~> 1.2)
       thor (~> 0.18)
     builder (3.2.2)
