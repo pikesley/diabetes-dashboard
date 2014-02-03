@@ -12,6 +12,7 @@ configure do
     end
 
     def authorized?
+      return true unless ENV['RACK_ENV'] == 'production'
       @auth ||= Rack::Auth::Basic::Request.new(request.env)
       @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == [ENV['DASHBOARD_USERNAME'], ENV['DASHBOARD_PASSWORD']]
     end
