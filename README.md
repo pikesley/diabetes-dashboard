@@ -1,9 +1,9 @@
-[![Build Status](http://img.shields.io/travis/pikesley/d.svg)](https://travis-ci.org/pikesley/d)
-[![Dependency Status](http://img.shields.io/gemnasium/pikesley/d.svg)](https://gemnasium.com/pikesley/d)
-[![Coverage Status](http://img.shields.io/coveralls/pikesley/d.svg)](https://coveralls.io/r/pikesley/d)
-[![Code Climate](http://img.shields.io/codeclimate/github/pikesley/d.svg)](https://codeclimate.com/github/pikesley/d)
+[![Build Status](http://img.shields.io/travis/pikesley/diabetes-dashboard.svg)](https://travis-ci.org/pikesley/diabetes-dashboard)
+[![Dependency Status](http://img.shields.io/gemnasium/pikesley/diabetes-dashboard.svg)](https://gemnasium.com/pikesley/diabetes-dashboard)
+[![Coverage Status](http://img.shields.io/coveralls/pikesley/diabetes-dashboard.svg)](https://coveralls.io/r/pikesley/diabetes-dashboard)
+[![Code Climate](http://img.shields.io/codeclimate/github/pikesley/diabetes-dashboard.svg)](https://codeclimate.com/github/pikesley/diabetes-dashboard)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://pikesley.mit-license.org)
-[![Badges](http://img.shields.io/:badges-6/6-ff6799.svg)](http://img.shields.io)
+[![Badges](http://img.shields.io/:badges-6/6-ff6799.svg)](https://github.com/pikesley/badger)
 
 A Dashing dashboard, driven by my [Pancreas API](http://pancreas-api.herokuapp.com/). Right now it shows:
 
