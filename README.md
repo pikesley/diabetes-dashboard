@@ -5,6 +5,8 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://pikesley.mit-license.org)
 [![Badges](http://img.shields.io/:badges-6/6-ff6799.svg)](https://github.com/pikesley/badger)
 
+# Diabetes dashboard
+
 A Dashing dashboard, driven by my [Pancreas API](http://pancreas-api.herokuapp.com/). Right now it shows:
 
 * Daily, weekly and 30-day blood-glucose graphs and averages
